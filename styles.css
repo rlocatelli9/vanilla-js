@@ -22,26 +22,34 @@
   margin: 4rem auto;
   width: 75%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
   & > ul {
-    margin: auto;
-    max-width: 60%;
+    /* margin: auto; */
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
     & > li {
       display: flex;
-      gap: 1rem;
       flex-direction: column;
       text-align: justify;
-
-      & > a {
-        margin-left: 2rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: purple;
-        font-weight: 600;
-      }
+      gap: 1rem;
+      flex-wrap: nowrap;
     }
   }
+}
+
+a {
+  margin-left: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: purple;
+  font-weight: 600;
 }
 
 #disclame {

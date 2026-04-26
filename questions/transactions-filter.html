@@ -5,15 +5,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" />
-  <style>
-    #search-field {
-      width: 20rem;
-      padding: 1rem .5rem;
-      border-radius: .5rem;
 
-      &::placeholder {
-        color: gray;
-        font-weight: 600;
+  <style>
+    #content {
+      margin: 4rem auto;
+      width: 100%;
+      width: 100%;
+      max-width: 30rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      & #search-field {
+        width: 100%;
+        padding: 1rem .5rem;
+        border-radius: .5rem;
+
+        &::placeholder {
+          color: gray;
+          font-weight: 600;
+        }
+      }
+
+      &>ul {
+        width: 100%;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        &>li {
+          display: flex;
+          flex-direction: column;
+          text-align: justify;
+          gap: 1rem;
+          flex-wrap: nowrap;
+
+          &>span {
+            height: 1.5rem;
+            width: 100%;
+            whitespace: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &>a {
+            margin-left: 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: purple;
+            font-weight: 600;
+          }
+        }
       }
     }
   </style>
@@ -21,11 +66,16 @@
 </head>
 
 <body>
-  <h1>Transactions filter list</h1>
-  <div id="content">
-    <input id="search-field" type="text" placeholder="Buscar" />
-    <ul id="filtered-list"></ul>
+  <h1 id="title" aria-label="transactions filter list">Transactions filter list</h1>
+  <nav style="text-align: center;">
+    <a href="../index.html" aria-label="back to home">
+      back to home
+    </a>
+  </nav>
+  <div id="content" aria-label="content main">
+    <input id="search-field" type="text" placeholder="Buscar" aria-placeholder="Search transactions" />
   </div>
+
 
 </body>
 <script src="./transactions-filter-list.js"></script>
