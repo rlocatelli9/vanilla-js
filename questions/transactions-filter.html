@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    #search-field {
+      width: 20rem;
+      padding: 1rem .5rem;
+      border-radius: .5rem;
+
+      &::placeholder {
+        color: gray;
+        font-weight: 600;
+      }
+    }
+  </style>
+  <title>Transactions filter list</title>
+</head>
+
+<body>
+  <h1>Transactions filter list</h1>
+  <div id="content">
+    <input id="search-field" type="text" placeholder="Buscar" />
+    <ul id="filtered-list"></ul>
+  </div>
+
+</body>
+<script src="./transactions-filter-list.js"></script>
+
+</html>
